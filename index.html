@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuanFest (Estéreo Paila)</title>
+    <!-- Estilos CSS personalizados -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos adicionales para la imagen en la esquina inferior izquierda */
+        .corner-images {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 1000;
+        }
+
+        .corner-images img {
+            width: 100px; /* Ajusta el tamaño de la imagen de la esquina inferior izquierda */
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px; /* Espacio entre las imágenes en la esquina */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 id="parallax-title">JuanFest</h1>
+        <h2>Esta es una invitación pensada en ti para que hagas parte de esta nueva edición del JuanFest. Así que alista el chingue estilo festival que se prendió esta vueltaaaaa👽. Haga scroll a la página y vea las foticos para que quede picado</h2>
+    </header>
+
+    <section class="image-section">
+        <!-- Ruta relativa a la imagen para ser compatible con la web -->
+        <img src="fotos/foto1.jpg" alt="Imagen del festival">
+    </section>
+
+    <!-- Sección adicional para fotos -->
+    <section class="additional-photos">
+        <h2>Llegue al final que me costo hacer esta bobada 😭</h2>
+        <div class="photo-gallery">
+            <img src="fotos/IMG-20220505-WA0045.jpg" alt="Foto del JuanFest">
+            <img src="fotos/20220416_011017000_iOS.jpg" alt="Foto del JuanFest">
+            <img src="fotos/IMG-20220505-WA0016.jpg" alt="Foto del JuanFest">
+            <img src="fotos/IMG-20220415-WA0103.jpg" alt="Foto del JuanFest">
+            <img src="fotos/IMG-20220505-WA0021 (1).jpg" alt="Foto del JuanFest">
+            <img src="fotos/IMG-20220505-WA0027.jpg" alt="Foto del JuanFest">
+        </div>
+    </section>
+
+    <section class="registration-section">
+        <h2>A qué lugar quieres que te enviemos las fotos y videos del JuanFest 😈</h2>
+        <form action="procesar_registro.php" method="POST">
+            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section class="playlist-section">
+        <h2>Escucha nuestra lista de reproducción en Spotify 🎃</h2>
+        <p><a href="https://open.spotify.com/playlist/5QOAZfeWHLUkTlCXO0hRnO?si=3565452656b64b84" target="_blank">¡Haz clic aquí para reproducir la lista!</a></p>
+    </section>
+
+    <!-- Script JavaScript para el efecto de paralaje -->
+    <script>
+        // Función para manejar el evento de scroll y aplicar el efecto de paralaje al título
+        window.addEventListener('scroll', function() {
+            const title = document.getElementById('parallax-title');
+            const scrollPosition = window.scrollY;
+            title.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+        });
+    </script>
+
+    <!-- Imagen en la esquina inferior izquierda -->
+    <div class="corner-images">
+        <img src="fotos/tara.png" alt="Derechos">
+    </div>
+</body>
+</html>
