@@ -23,8 +23,8 @@ body {
 
 /* Estilos para el título h1 */
 h1 {
-    font-weight: 1000;
-    font-size: 200px;
+    font-weight: 100;
+    font-size: 100px;
     color: #FB6E00;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
