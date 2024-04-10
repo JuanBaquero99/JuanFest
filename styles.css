@@ -1,3 +1,9 @@
+/* Cargar la fuente Musicality desde un archivo local */
+@font-face {
+    font-family: 'Musicality';
+    src: url('fonts/Musicality.otf') format('opentype');
+}
+
 /* Estilos generales del cuerpo del documento */
 body {
     font-family: 'Musicality', sans-serif;
@@ -9,20 +15,13 @@ body {
     overflow-x: hidden;
 }
 
-/* Cargar la fuente Musicality desde un archivo local */
-@font-face {
-    font-family: 'Musicality';
-    src: url('fonts/Musicality.otf') format('opentype');
-}
-
 /* Estilos del encabezado */
 .header {
     text-align: center;
     padding: 40px 0;
 }
 
-/* Estilos para el título h1 */
-h1 {
+#parallax-title {
     font-weight: 100;
     font-size: 100px;
     color: #FB6E00;
@@ -38,11 +37,8 @@ h2 {
     color: #697242;
 }
 
-/* Estilos para las secciones principales */
-.image-section,
-.registration-section,
-.playlist-section,
-.additional-photos {
+/* Estilos para las secciones */
+section {
     text-align: center;
     margin: 30px auto;
     padding: 20px;
@@ -52,22 +48,8 @@ h2 {
     background-color: #1D1C1B;
 }
 
-/* Estilos específicos para la sección de registro */
-.registration-section h2 {
-    color: #FB6E00;
-}
-
-.registration-section input[type="email"] {
-    width: 80%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #CCCCCC;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-/* Estilos para los enlaces de la sección de lista de reproducción */
-.playlist-section a {
+/* Estilos para los enlaces */
+a {
     color: #FF8638;
     text-decoration: none;
     font-weight: 700;
@@ -75,15 +57,13 @@ h2 {
     transition: color 0.3s ease;
 }
 
-/* Estilos para los enlaces al pasar el mouse */
-.playlist-section a:hover {
-    color: #FF8638;
+a:hover {
+    color: #697242;
     text-decoration: underline;
 }
 
 /* Estilos para las imágenes dentro de las secciones */
-.image-section img,
-.additional-photos img {
+img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -105,4 +85,11 @@ h2 {
     height: auto;
     border-radius: 50%;
     margin-bottom: 10px; /* Espacio entre las imágenes en la esquina */
+}
+
+/* Estilos del pie de página */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #697242;
 }
